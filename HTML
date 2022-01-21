@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Perfect_Guess</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+        
+        <div id="head">
+           <h1>  THE PERFECT GUESS  </h1>
+
+            <details id="rules">
+                <summary> Rules </summary>
+                <ol>
+
+                    <li> Guess the number between 1 to 50</li >
+                    <li>You will get 7 numbers of guesses to give answer</li>
+                    <li></li>
+                </ol >
+            </details>
+            <h3> Take a guess between 1 to 50 </h3>
+        
+        <div id="count"></div>
+        <!--<div id="real">The number is: ?</div>-->
+
+        </div id='game' >
+                
+            <label for="f">Your Guess: <br> <br>
+                <input type="text" name="first" id="first" size="15px">
+            </label>
+          
+            <input id="b1" type="button" onclick="logic()" value="Guess"><br> <br>
+
+        <div id="box" >
+            <h2>Hint:</h2>
+            <h3 id="hint"></h3>
+        </div>
+
+        <div id="show"></div>
+
+        <div id="won"></div>
+        <br>
+        <div><p id="F1"></p></div>
+        <div><p id="F2"></p></div>
+      
+
+        <script src="/scripts.js"> </script>
+    
+</body>
+</html>
