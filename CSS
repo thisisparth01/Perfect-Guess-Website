@@ -1,0 +1,29 @@
+body{
+    background-color:rgb(0, 0, 0);
+    color: white;
+    padding-left: 10px;
+}
+h1{
+    color:rgb(255, 0, 0);
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+#rules{
+    padding-left: 5px;
+}
+
+#box{
+    border:1px solid white;
+    height: 100px;
+    width: 270px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: rgb(242, 255, 53);
+    color: black;
+    padding-bottom: 10px;
+    
+
+}
+#show{
+    color: white;
+}
