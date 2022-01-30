@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Perfect_Guess</title>
-    <link rel="stylesheet" href="/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect-Guess</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        
-        <div id="head">
-           <h1>  THE PERFECT GUESS  </h1>
+    <div class="full">
 
-            <details id="rules">
-                <summary> Rules </summary>
-                <ol>
+        <div class="heading">
+        <h1>The Perfect Guess</h1>
+        </div> <br> 
 
-                    <li> Guess the number between 1 to 50</li >
-                    <li>You will get 7 numbers of guesses to give answer</li>
-                    <li></li>
-                </ol >
-            </details>
-            <h3> Take a guess between 1 to 50 </h3>
-        
-        <div id="count"></div>
-        <!--<div id="real">The number is: ?</div>-->
+        <details> 
+            <summary> Rules (Please read the rules before playing for the first time!)</summary>
+            <ul>
+                <li class="list1">You have to guess a number between 1 to 50</li>
+                <li class="list2">You will get a hint to guess the correct number choosen by your device</li>
+                <li class="list3">Once 7 guessses are finished, YOU LOSE</li>
+                <li class="list4">If you manage to guess correct number before 7 guesses, YOU WIN THE GAME!</li>
+            </ul>
+        </details> <br>
 
-        </div id='game' >
-                
-            <label for="f">Your Guess: <br> <br>
-                <input type="text" name="first" id="first" size="15px">
-            </label>
-          
-            <input id="b1" type="button" onclick="logic()" value="Guess"><br> <br>
+        <span id="enter">Enter Your Guess <input style="height:20px" type="text" class="in_guess" id="in"></span>
 
-        <div id="box" >
-            <h2>Hint:</h2>
-            <h3 id="hint"></h3>
+        <div class="mid">
+        <button class="btn" style="font-size:18px;padding:4px 7px;width:72px">Guess</button> <span class='count'></span> <br><br>
+        </div> <br>
+
+        <div class="hint">
+            <h2 class="display" id="display" >Enter a number between 1 to 50 </h2>
+        </div>  <br>
+
+        <div class='count'>
+        <span id="history">Details Of Previous Guesses: </span> 
+        <span class='his1'> </span>
+        <span class='his2'></span>
+        <span class='his3'></span>
+        <span class='his4'></span>
+        <span class='his5'></span>
+        <span class='his6'></span>
         </div>
 
-        <div id="show"></div>
+        <span class="show"></span>
+        <span class="show2"></span>
+        <span class="show3"></span>
+        <span class="show4"></span>
+        <span class="show5"></span>
+        <span class="show6"></span>
+        <span class="show7"></span>
 
-        <div id="won"></div>
-        <br>
-        <div><p id="F1"></p></div>
-        <div><p id="F2"></p></div>
-      
-
-        <script src="/scripts.js"> </script>
-    
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
