@@ -1,73 +1,103 @@
-let button = document.getElementById('b1');
-let output = document.getElementById('hint');
+let input_guess = document.querySelector("button")
+let count = 1
+const i = Math.floor(Math.random() * 50) + 1;
 
-let win = document.getElementById('won');
-let i = Math.floor(Math.random() * 50) + 1;
+input_guess.onclick = function(){
+    let get_input = document.getElementById('in').value
 
+    get_input = parseInt(get_input)
 
-let F1 = document.getElementById('F1');
-let F2 = document.getElementById('F2');
-
-
-function logic() {
-    var i=0;
-    g =Number(i)
-
-    while (g < 7) {
-
-        var input = document.getElementById("first").value;
+    let show_hint = document.querySelector('.display')
 
 
-        if (input != i) {
+    if (get_input != i) {
 
-            if (((i - input) > 8) && ((i - input) < 20)) {
-                output.innerText = 'Your guess is low';
-            }
-
-            else if ((i - input) >= 20) {
-                output.innerText = 'Your guess is too much low';
-            }
-
-            else if ((((i - input) < 3) && ((i - input) > (-3))) || (((input - i) < 3) && ((input - i) > (-3)))) {
-                output.innerText = 'You are very near to the number';
-            }
-
-            else if ((((i - input) < 8) && ((i - input) > (-8))) || (((input - i) < 8) && ((input - i) > (-8)))) {
-                output.innerText = 'You are little near to the number!';
-            }
-
-
-            else if (((input - i) > 8) && ((input - i) < 20)) {
-                output.innerText = 'Your guess is high';
-            }
-
-            else if ((input - i) >= 20) {
-                output.innerText = 'Your guess is too much high';
-            }
-            else {
-                output.innerText = 'No hints for this one!';
-            }
+        if (((i - get_input) > 8) && ((i - get_input) < 20)) {
+            show_hint.innerHTML = 'Your guess is low';
         }
 
+        else if ((i - get_input) >= 20) {
+            show_hint.innerHTML = 'Your guess is too much low';
+        }
+
+        else if ((((i - get_input) < 3) && ((i - get_input) > (-3))) || (((get_input - i) < 3) && ((get_input - i) > (-3)))) {
+            show_hint.innerHTML = 'You are very near to the number';
+        }
+
+        else if ((((i - get_input) < 8) && ((i - get_input) > (-8))) || (((get_input - i) < 8) && ((get_input - i) > (-8)))) {
+            show_hint.innerHTML = 'You are little near to the number!';
+        }
+
+
+        else if (((get_input - i) > 8) && ((get_input - i) < 20)) {
+            show_hint.innerHTML = 'Your guess is high';
+        }
+        else if ((get_input - i) >= 20) {
+            show_hint.innerHTML = 'Your guess is too much high';
+        }
         else {
-
-            alert("Woohoo!, Your guess is correct! ");
-            loop()
-            break;
-
+            show_hint.innerHTML = 'No hints for this one!';
         }
     }
+    else{
+        alert("Woohoo!! You Won in just "+ count + " guesses!!")
+        window.location.reload()
+    }
+    let changed = document.getElementById('display')
 
-}
+    if (count==1){
+    let change = document.querySelector(".show");
+    change.innerHTML ="<br> <span class='sorry'>Sorry, Your guess is incorrect try something else</span> <br><br>" + "Your first guess was  " + "<span id='different'>"+get_input+'</span>' + "<br> Hint was: "+ "<span id='different'>"+changed.textContent +'</span>'
+    let his1 = document.querySelector('.his1');
+    his1.innerText = "( "+ get_input+ ","
+    count++
+    }
+    else if (count==2){
+        let change = document.querySelector(".show2");
+        change.innerHTML ="Your second guess was  " +"<span id='different'>"+ get_input+'</span>'+ "<br> Hint was: "+ "<span id='different'>"+changed.textContent+'</span>'
+        let his2 = document.querySelector('.his2');
+        his2.innerText = get_input+ ","
+        count++
+    }
+    else if (count==3){
+        let change = document.querySelector(".show3");
 
-function loop() {
-    var loop = prompt("Do you want to play again?")
-    if ((loop == 'No') || (loop == 'no') || (loop == 'NO')) {
-        alert("THANK YOU for playing our game, Hope you enjoyed!")
+        change.innerHTML ="Your third guess was  " +"<span id='different'>"+ get_input+'</span>'+ "<br> Hint was: "+ "<span id='different'>"+changed.textContent+'</span>'
+        let his3 = document.querySelector('.his3');
+        his3.innerText = get_input+ ","
+        count++
+    }
+    else if (count==4){
+        let change = document.querySelector(".show4");
+
+        change.innerHTML ="Your forth guess was  " +"<span id='different'>"+ get_input+'</span>'+ "<br> Hint was: "+"<span id='different'>"+ changed.textContent+'</span>'
+        let his4 = document.querySelector('.his4');
+        his4.innerText = get_input+ ","
+        count++
+    }
+    else if (count==5){
+        let change = document.querySelector(".show5");
+
+        change.innerHTML ="Your fifth guess was  " +"<span id='different'>"+ get_input+'</span>'+ "<br> Hint was: "+ "<span id='different'>"+changed.textContent+'</span>'
+        let his5 = document.querySelector('.his5');
+        his5.innerText = get_input+ ","
+        count++
+    }
+    else if (count==6){
+        let change = document.querySelector(".show6");
+        change.innerHTML ="Your sixth guess was " + "<span id='different'>"+get_input+'</span>'+ "<br> Hint was: "+ "<span id='different'>"+changed.textContent+'</span>'
+        let his6 = document.querySelector('.his6');
+        his6.innerText = get_input
+        count++
     }
     else {
-        output.innerText = ''
-        logic()
-    }
+        let change = document.querySelector(".show7");
+        change.innerHTML ="<br> Sorry, You Are Out Of Guesses!"
 
+        alert("You Lose!, All 7 guesses are finsihed!! The number was: "+i+"")
+        window.location.reload()
+    }
+    let c = document.querySelector('.count');
+    c.innerText = count-1;
+    
 }
