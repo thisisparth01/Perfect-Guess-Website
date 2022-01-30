@@ -1,29 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
-    background-color:rgb(0, 0, 0);
+    background-color:black;
     color: white;
-    padding-left: 10px;
+    padding: 0 17px;
+     font-family: 'Baloo Tamma 2', cursive; 
+}
+.hint{
+    background-color:rgb(0, 81, 255);
+    columns: white;
+    position: sticky;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    
+}
+#different{
+    font-size: large;
+    color:rgb(255, 255, 108);
+    font-family: 'Baloo Tamma 2', cursive; 
+}
+#enter{
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Baloo Tamma 2', cursive; 
+}
+input{
+    width: 60px;
+    margin: 0px 10px;
+}
+.full{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+button{
+    width: 55px;
+    display: inline;
+}
+h2{
+    padding: 0 10px;
+    color: white;
+    font-family: 'Baloo Tamma 2', cursive; 
+    font-size:21px;
 }
 h1{
-    color:rgb(255, 0, 0);
-    padding-left: 15px;
-    padding-bottom: 10px;
+    padding: 14px 18px;
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    text-decoration: underline;
 }
-#rules{
-    padding-left: 5px;
+ul{padding: 0 5px;}
+.heading{display: flex;}
+ul li{color:salmon;}
+#history{
+    color: red;
+    font-family: 'Baloo Tamma 2', cursive; 
+    font-size: large;
+    text-decoration: underline;
 }
-
-#box{
-    border:1px solid white;
-    height: 100px;
-    width: 270px;
-    border-radius: 5px;
-    padding-left: 10px;
-    background-color: rgb(242, 255, 53);
-    color: black;
-    padding-bottom: 10px;
-    
-
+.sorry{
+    padding-bottom: 5px;
+    color: cyan;
 }
-#show{
-    color: white;
+.mid{
+    display: flex;
+    align-items: center;
+}
+.count{
+    padding: 0px 10px;
 }
